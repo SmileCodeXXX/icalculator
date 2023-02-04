@@ -126,7 +126,6 @@ button:hover{
     justify-content: center;
     align-items: center;
     position: sticky;
-    top: 0;
   }
   .logo {
     font-weight: 900;
@@ -148,7 +147,7 @@ button:hover{
   .iCalculator{
     width: 350px;
     height: 40vmax;
-    margin: 50px auto;
+    margin: 45px auto;
     overflow: hidden;
   }
 
