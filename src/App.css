@@ -1,0 +1,313 @@
+:root{
+  --primary: rgb(255, 166, 0) ;
+  --secondary:  rgba(84, 83, 83, 0.882);
+  --dark: rgba(0, 0, 0, 0.865);
+  --light:  rgba(255, 255, 255, 0.554);
+  --digits:  rgba(107, 104, 104, 0.882);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+.navbar,
+.footer {
+  display: none;
+}
+body{
+  background-color: var(--light);
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+}
+.iCalculator{
+  width: 100%;
+  height: 100vmax;
+  background-color: #fff;
+  border-radius: 20px;
+  box-sizing: 0px 2px 64px 23px rgba(0, 0, 0, 0.952); 
+}
+
+.display{
+  width: 100%;
+  height: 30%;
+  flex-grow: 1;
+  background-color: var(--dark);
+  color: #fff;
+  text-align: right;
+  position: relative;
+}
+.display p{
+  position: absolute;
+  bottom: 0;
+  right:0;
+  padding: 20px 35px;
+  font-size: 35px;
+  font-weight: 400;
+}
+button{
+  appearance: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 15.5px;
+  cursor: pointer;
+  transition: 0.4s;
+  border: 0.3px solid rgba(86, 86, 86, 0.468);
+}
+
+button:hover{
+  opacity: 0.9;
+}
+
+.topKeys{
+  display: flex;
+  height: 15vmax;
+}
+.topKeys button{
+  flex-grow: 1;
+  flex: 1 1 33.33%;
+  background-color: var(--secondary);
+}
+
+.buttomKeys{
+  display: flex;
+  flex-direction: row-reverse;
+  height: 55%;
+  width: 100%;
+}
+
+.operationKeys{
+  display: flex;
+  flex-direction: column;
+  width: 33.3%;
+}
+.operationKeys button{
+  font-weight: 700;
+  flex: 1 1 0%;
+  flex-grow: 1;
+}
+.digitKeys {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.digitKeys button{
+  font-weight: 700;
+  background-color: var(--digits);
+  width: 100%;
+  flex: 1 1 33.33%;
+}
+
+.equal{
+  flex: 66.66% !important;
+}
+
+.orange {
+  background-color: var(--primary) !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+    background-color: rgb(243, 193, 56);
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+  }
+  .logo {
+    font-weight: 900;
+    font-size: 2em;
+  }
+  .footer {
+    background-color: gray;
+    width: 100%;
+    height: 80px;
+    bottom: 0px;
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+  }
+  .iCalculator{
+    width: 350px;
+    height: 40vmax;
+    margin: 50px auto;
+    overflow: hidden;
+  }
+
+  .topKeys{
+    height: 6.5vmax;
+  }
+}
+
+
+
+
+
+
+/**
+
+:root{
+  
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+.navbar,
+.footer {
+  display: none;
+}
+body{
+  background-color: rgba(255, 255, 255, 0.554);
+  width: 100%;
+  height: 100%;
+}
+form .container {
+  background-color: rgba(255, 228, 196, 0.199);
+  display: block;
+}
+
+.display {
+  width: 100%;
+  height: 25vmax;
+  background-color: rgb(84, 83, 83);
+  color: #fff;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.display p {
+  font-size: 4.5rem;
+  padding: 2px 30px;
+  margin-top: 50px;
+ 
+}
+
+.buttomKeys {
+  background-color: gray;
+  height: 59vmax;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.buttomKeys  button{
+  color: rgb(250, 246, 246);
+  font-weight: 800;
+  padding: 35px;
+  align-items: center;
+  width: 25%;
+  border: 0.6px rgba(169, 167, 167, 0.734) solid;
+}
+.topKeys {
+  display: flex;
+  height: 16vmax;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  background-color: rgb(98, 96, 96);
+}
+
+.topKeys button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.6px rgba(169, 167, 167, 0.734) solid;
+  padding: 20px 0;
+  color: rgb(250, 246, 246);
+  font-weight: 800; 
+  flex: 1;
+}
+
+.equal {
+  flex: 1;
+}
+
+.orange {
+  background-color: orange;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+    background-color: rgb(243, 193, 56);
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+  }
+  .display{
+    height: 120px;
+  }
+  .topKeys{
+    height: 90px;
+  }
+  .buttomKeys{
+    height: 370px;
+  }
+  .logo {
+    font-weight: 900;
+    font-size: 2em;
+  }
+  .footer {
+    background-color: gray;
+    width: 100%;
+    height: 80px;
+    bottom: 0px;
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+  }
+  
+  .container {
+    width: 30%;
+    margin: 25px auto;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 2px rgb(75, 74, 74);
+    overflow: hidden;
+  }
+  .display p {
+    margin-top: 10px;
+   
+  }
+}
+
+*/
