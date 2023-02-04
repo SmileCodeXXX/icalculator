@@ -66,6 +66,7 @@ button{
 
 button:hover{
   opacity: 0.9;
+  overflow: hidden;
 }
 
 .topKeys{
@@ -150,7 +151,6 @@ button:hover{
     margin: 45px auto;
     overflow: hidden;
   }
-
   .topKeys{
     height: 6.5vmax;
   }
