@@ -2,33 +2,20 @@ import { useState } from "react";
 
 
 const MainPage = () => {
-  const [displayDigit, setDisplayDigit] = useState(0);
-  const [result, setResult] = useState(null);
-  /*
-  const [numberKeys, setNumberKeys] = useState([
-    "7",
-    "8",
-    "9",
-    "x",
-    "4",
-    "5",
-    "6",
-    "-",
-    "1",
-    "2",
-    "3",
-    "+",
-    "0",
-    ".",
-    "=",
-  ]);
-  //const [topKeys, setTopKeys] = useState(["AC", "+/-", "%", "/"]);
-*/
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setDisplayDigit("");
+  const [displayCal, setDisplayCal] = useState('');
+  const [result, setResult] = useState('');
+  
+  const [operator, setOperator] = useState(["AC", "+/-", "%", "/"]);
+
+  const updateCal = value => {
+    setDisplayCal(displayCal + value)
   };
 
+
+
+
+
+  
   const createNumberKeys = () => {
     const digitKeys = [];
     for (let i = 1; i < 10; i++) {
@@ -41,21 +28,24 @@ const MainPage = () => {
     <div className="iCalculator">
         {/**display number when keybis pressed */}
         <div className="display">
-          <p>{result === null ? displayDigit : result}</p>
+          <p>
+            {result ? <span>0</span> : result}
+            { displayCal || '0'}
+          </p>
         </div>
         {/*the button keys */}
         <div className="topKeys">
           <button>AC</button>
           <button>+/-</button>
-          <button>%</button>
-          <button className="orange">/</button>
+          <button onClick={()=>updateCal('%')}>%</button>
+          <button className="orange" onClick={()=>updateCal('/')}>/</button>
         </div>
 
         <div className="buttomKeys">
           <div className="operationKeys">
-            <button className="orange">x</button>
-            <button className="orange">-</button>
-            <button className="orange">+</button>
+            <button className="orange" onClick={()=>updateCal('x')}>x</button>
+            <button className="orange" onClick={()=>updateCal('-')}>-</button>
+            <button className="orange" onClick={()=>updateCal('+')}>+</button>
             <button className="orange">=</button>
           </div>
           <div className="digitKeys">
