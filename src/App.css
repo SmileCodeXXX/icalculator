@@ -33,6 +33,7 @@ body{
   background-color: #fff;
   border-radius: 20px;
   box-sizing: 0px 2px 64px 23px rgba(0, 0, 0, 0.952); 
+  overflow: hidden;
 }
 
 .display{
@@ -49,7 +50,7 @@ body{
   bottom: 0;
   right:0;
   padding: 20px 35px;
-  font-size: 35px;
+  font-size: 5em;
   font-weight: 400;
 }
 button{
@@ -149,7 +150,7 @@ button:hover{
     width: 350px;
     height: 40vmax;
     margin: 45px auto;
-    overflow: hidden;
+   
   }
   .topKeys{
     height: 6.5vmax;
